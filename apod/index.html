@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- NASA Astronomy Picture of the Day: one REST API call, date picker for interactivity -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Picture of the Day</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>NASA Astronomy Picture of the Day</h1>
+    <p>Pick a date to see that day's picture (or video) and its description.</p>
+  </header>
+
+  <main class="site-main">
+    <section class="controls">
+      <label for="date-picker">Choose a date:</label>
+      <input type="date" id="date-picker">
+      <button id="today-btn" type="button">Today</button>
+    </section>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <article id="apod" class="apod" hidden>
+      <h2 id="apod-title"></h2>
+      <p id="apod-date" class="meta"></p>
+      <div id="apod-media" class="media"></div>
+      <p id="apod-explanation"></p>
+      <p id="apod-credit" class="meta"></p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>Data from <a href="https://api.nasa.gov/" target="_blank" rel="noopener">NASA Open APIs</a></p>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
